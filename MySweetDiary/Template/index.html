@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy UI</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Lorem Ipsum Header</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Buttons</h2>
+        <button class="btn">Primary</button>
+        <button class="btn outline">Outline</button>
+      </section>
+
+      <section>
+        <h2>Switch</h2>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </section>
+
+      <section>
+        <h2>Slider</h2>
+        <input type="range" class="range-slider" min="0" max="100" value="50" />
+      </section>
+
+      <section>
+        <h2>Links</h2>
+        <p><a href="#" class="pill-link">Standard Pill Link</a></p>
+        <p><span class="pill-link">Text-style Pill</span></p>
+      </section>
+
+      <section class="image-section">
+        <h2>Template Images</h2>
+        <div class="img-row">
+          <img src="https://placehold.co/300x200" alt="Placeholder"/>
+          <img src="https://placehold.co/150x150" alt="Placeholder"/>
+          <img src="https://placehold.co/100x200" alt="Placeholder"/>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Your Name</p>
+    </footer>
+  </div>
+
+	<script>
+	  const slider = document.querySelector('.range-slider');
+	  function updateSliderGradient(val) {
+		const percent = val / 100;
+		const start = "#f3b6b6"; // warm pink
+		const end = "#8b5e5e";   // deep brown
+		slider.style.background = `linear-gradient(to right, ${start} 0%, ${end} ${percent * 100}%)`;
+	  }
+
+	  slider.addEventListener('input', (e) => {
+		updateSliderGradient(e.target.value);
+	  });
+
+	  updateSliderGradient(slider.value);
+	</script>
+</body>
+</html>

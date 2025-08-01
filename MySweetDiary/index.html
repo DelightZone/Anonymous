@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy UI Site</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to CozyUI</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section>
+        <h2>The Comfiest UI You'll Ever Use</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat, nunc at facilisis eleifend, magna justo elementum velit, vel fermentum justo ligula vel sem.</p>
+        <button class="btn">Get Started</button>
+      </section>
+
+      <!-- Features Section -->
+      <section>
+        <h2>Features</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet magna at urna condimentum pulvinar. Morbi vel leo vitae sapien mattis dictum.</p>
+        <div class="pill-link">Responsive Design</div>
+        <div class="pill-link">Minimalist Aesthetic</div>
+        <div class="pill-link">No Frameworks</div>
+        <div class="pill-link">100% CSS / HTML</div>
+      </section>
+
+      <!-- Button Demo -->
+      <section>
+        <h2>Actions</h2>
+        <button class="btn">Primary Button</button>
+        <button class="btn outline">Secondary Button</button>
+      </section>
+
+      <!-- Switch Demo -->
+      <section>
+        <h2>Preferences</h2>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+        <p>Toggle cozy mode</p>
+      </section>
+
+      <!-- Slider Demo -->
+      <section>
+        <h2>Adjust Intensity</h2>
+        <input type="range" class="range-slider" min="0" max="100" value="50" />
+      </section>
+
+      <!-- Testimonials -->
+      <section>
+        <h2>What People Say</h2>
+        <blockquote>
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit. This UI feels like a warm blanket.” — Someone
+        </blockquote>
+        <blockquote>
+          “Nullam tincidunt, velit eu fermentum suscipit, justo leo facilisis velit, sed pretium magna elit vel odio.” — Another Fake Person
+        </blockquote>
+      </section>
+
+      <!-- Newsletter -->
+      <section>
+        <h2>Join Our Newsletter</h2>
+        <p>Get notified when we release new cozy components. No spam. Only warmth.</p>
+        <form>
+          <input type="email" placeholder="you@example.com" style="padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid var(--border); width: 60%; max-width: 300px; margin: 1rem 0;">
+          <br>
+          <button class="btn">Subscribe</button>
+        </form>
+      </section>
+
+      <!-- Placeholder Images -->
+      <section class="image-section">
+        <h2>Our Vibe</h2>
+        <div class="img-row">
+          <img src="https://placehold.co/300x200?text=Image+1" alt="Placeholder"/>
+          <img src="https://placehold.co/150x150?text=Image+2" alt="Placeholder"/>
+          <img src="https://placehold.co/100x200?text=Image+3" alt="Placeholder"/>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 CozyUI. All snuggles reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Slider JS -->
+  <script>
+    const slider = document.querySelector('.range-slider');
+    function updateSliderGradient(val) {
+      const percent = val / 100;
+      const start = "#f3b6b6"; // warm pink
+      const end = "#8b5e5e";   // deep brown
+      slider.style.background = `linear-gradient(to right, ${start} 0%, ${end} ${percent * 100}%)`;
+    }
+
+    slider.addEventListener('input', (e) => {
+      updateSliderGradient(e.target.value);
+    });
+
+    updateSliderGradient(slider.value);
+  </script>
+</body>
+</html>
